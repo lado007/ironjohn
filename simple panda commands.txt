@@ -1,0 +1,42 @@
+simple commands in conda pandas
+- changing header names = df.rename({'ST':'State'}, axis=1, inplace=True)
+  or to change all header names with space = columns = ["new name1", "new name2",...]
+  df.columns = columns
+
+- value counts for categerorical series or colums= df['gender'].value_counts()
+
+- to know the objects in a categorical value = df['ever_married'].unique()
+
+- to repalce objects in a column = df['ever_married'] = df['ever_married'].replace({'No':False, 'Yes':True})
+
+- to identify duplicates = df.duplicated().value_counts() or df.duplicated().sum()......to drop duplicates = df = df.drop_duplicates()
+
+- to change columns data types = df['stroke']=df['stroke'].astype('bool'/'str'/'int')
+
+- splitting of dataframes or index location = df1 = df.iloc[:1000]
+
+- to concat data frames into one= df_all=pd.concat([df3,df2,df1],axis=0)
+
+- to reset index after concatinating = df_all.reset_index(drop=True, inplace=True)
+
+- to know the min or max of a particular series= df['age'].max()/min()
+
+- to bring out a couple of series from a data frame= newdf=df[['gender', 'work_type']]
+
+- to select a section of the dataframe= newAgedf=df[df['age']> 30]
+
+- the command [df['age']> 30] only checks for the booleans statements if true or false for all the indexes
+
+- to bring out a specific section out of a dataframe= adult_work_type=df.loc[df['age']>30, 'work_type']
+
+- to bring out small section of the data frame = df.iloc[10:20, 2:5]
+
+- dropping irrelevant columns = df.drop([column1, column2, ...], inplace=True, axis=1)
+
+- filling up null values (1)- using fill null= df["Gender"].fillna("No Gender", inplace = True)
+                         (2)- using replace null= df.replace(to_replace = np.nan, value = desired value)
+                         (3)- dropping the nulls= df.dropna() or data.dropna(axis = 0, how ='any')[ drop rows with at least one Nan value]
+                                                 OR df.dropna(how = 'all')[Dropping rows if all values in that row are missing]
+                                                 OR df.dropna(axis = 1)[ drop a columns which have at least 1 missing values]
+                                           to compare or find number of nulls dropped we can use the function
+                                           df.len().....(len(df)-len(new_df))
