@@ -2,6 +2,7 @@ simple commands in conda pandas
 - changing header names = df.rename({'ST':'State'}, axis=1, inplace=True)
   or to change all header names with space = columns = ["new name1", "new name2",...]
   df.columns = columns
+  to change header names with underscore- df.columns=[h.lower().replace(' ','_') for h in df.columns]
 
 - value counts for categerorical series or colums= df['gender'].value_counts()
 
@@ -40,3 +41,24 @@ simple commands in conda pandas
                                                  OR df.dropna(axis = 1)[ drop a columns which have at least 1 missing values]
                                            to compare or find number of nulls dropped we can use the function
                                            df.len().....(len(df)-len(new_df))
+
+_ to display all columns-pd.set_option('display.max_columns', None)
+
+- to bring out unique values in each columns- c in df.columns:
+                                              print(c, len(df[c].unique()))
+
+- to select data types- df_num=df.select_dtypes(exclude=object)
+                        df_cat=df.select_dtypes(include=object)
+
+
+-how many unique values in  each columns- for c in df.columns:
+                                             print(c, len(df[c].unique()))
+
+- POWER TRANSFORMATION - def log_transform(x):
+                              x=np.log(x)
+                           if np.isfinite(x):
+                              return x
+                           else:
+                              return 0
+   #create a copy of the colunm in isolation
+clv_1=list(map(log_transform,df['customer_lifetime_value']))
