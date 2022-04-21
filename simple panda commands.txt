@@ -44,8 +44,6 @@ simple commands in conda pandas
 
 _ to display all columns-pd.set_option('display.max_columns', None)
 
-- to bring out unique values in each columns- c in df.columns:
-                                              print(c, len(df[c].unique()))
 
 - to select data types- df_num=df.select_dtypes(exclude=object)
                         df_cat=df.select_dtypes(include=object)
@@ -62,3 +60,5 @@ _ to display all columns-pd.set_option('display.max_columns', None)
                               return 0
    #create a copy of the colunm in isolation
 clv_1=list(map(log_transform,df['customer_lifetime_value']))
+
+- to split addressess using the split series function- df[['City', 'State']] = df['location'].str.split(',', n=1, expand=True)
