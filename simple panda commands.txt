@@ -4,6 +4,8 @@ simple commands in conda pandas
   df.columns = columns
   to change header names with underscore- df.columns=[h.lower().replace(' ','_') for h in df.columns]
 
+-to standadize column names with lower and underscore= df.columns=[h.lower().replace(' ','_') for h in df.columns]
+
 - value counts for categerorical series or colums= df['gender'].value_counts()
 
 - to know the objects in a categorical value = df['ever_married'].unique()
@@ -61,4 +63,9 @@ _ to display all columns-pd.set_option('display.max_columns', None)
    #create a copy of the colunm in isolation
 clv_1=list(map(log_transform,df['customer_lifetime_value']))
 
+- bringing out specific words from a statement= df['data_engineer']=df['position'].str.contains('engin', flags=re.IGNORECASE, regex=True) 
+
 - to split addressess using the split series function- df[['City', 'State']] = df['location'].str.split(',', n=1, expand=True)
+
+- one hot coding to change categorical columns to numbers = df_cat_enc=pd.get_dummies(df_cat)
+
