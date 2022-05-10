@@ -13,7 +13,7 @@ simple commands in conda pandas
 - to repalce objects in a column = df['ever_married'] = df['ever_married'].replace({'No':False, 'Yes':True})
 
 - to identify duplicates = df.duplicated().value_counts() or df.duplicated().sum()......to drop duplicates = df = df.drop_duplicates()
-                         see duplicates - data[data.duplicated(keep=false)]
+                         see duplicates - data[data.duplicated(keep=False)]
 
 - to change columns data types = df['stroke']=df['stroke'].astype('bool'/'str'/'int')
 
