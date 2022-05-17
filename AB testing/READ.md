@@ -8,8 +8,8 @@ There are three data sets for this case study:
 3) Data set 3 (df_final_experiment_clients) contains a list of clients and indicates whether they were a part of the experiment 
 
 
+## Result 
+calculating the winning design we can come to conclusion that the test variation was a success in regard to the control with 99% confidence.![ABCONVERSIONRATE](https://github.com/lado007/ironjohn/blob/main/AB%20testing/visualization/AB_conversion.png)
+![ABGRAPH](https://github.com/lado007/ironjohn/blob/main/AB%20testing/visualization/AB_graph.png)
 
-
-
-Tomek links are pairs of very close instances, but of opposite classes. Removing the instances of the majority class of each pair increases the space between the two classes, facilitating the classification process.![tomek1](https://user-images.githubusercontent.com/103430199/166903817-e83c42d2-b83c-4f93-8fc0-1f3352c5b008.png)
 
