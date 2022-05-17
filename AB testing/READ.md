@@ -9,5 +9,5 @@ There are three data sets for this case study:
 
 
 ## Result 
-calculating the winning design we can come to conclusion that the test variation was a success in regard to the control.![ABCONVERSIONRATE](https://user-images.githubusercontent.com/103430199/166903817-e83c42d2-b83c-4f93-8fc0-1f3352c5b008.png)
+calculating the winning design we can come to conclusion that the test variation was a success in regard to the control.![ABCONVERSIONRATE](https://github.com/lado007/ironjohn/blob/main/AB%20testing/visualization/AB_conversion.png)
 
